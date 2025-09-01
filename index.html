@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Desi Etsy</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+  </head>
+  <body class="bg-body" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title>Search</title>
+        <path fill="currentColor" d="M19 3C13.488 3 9 7.488 9 13c0 2.395.84 4.59 2.25 6.313L3.281 27.28l1.439 1.44l7.968-7.969A9.922 9.922 0 0 0 19 23c5.512 0 10-4.488 10-10S24.512 3 19 3zm0 2c4.43 0 8 3.57 8 8s-3.57 8-8 8s-8-3.57-8-8s3.57-8 8-8z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="user" viewBox="0 0 16 16">
+        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="cart" viewBox="0 0 16 16">
+        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="arrow-left" viewBox="0 0 32 32">
+        <path fill="currentColor" d="m13.281 6.781l-8.5 8.5l-.687.719l.687.719l8.5 8.5l1.438-1.438L7.938 17H28v-2H7.937l6.782-6.781z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="arrow-right" viewBox="0 0 32 32">
+        <path fill="currentColor" d="M18.719 6.781L17.28 8.22L24.063 15H4v2h20.063l-6.782 6.781l1.438 1.438l8.5-8.5l.687-.719l-.687-.719z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="shipping-fast" viewBox="0 0 32 32">
+        <path fill="currentColor" d="M0 6v2h19v15h-6.156c-.446-1.719-1.992-3-3.844-3c-1.852 0-3.398 1.281-3.844 3H4v-5H2v7h3.156c.446 1.719 1.992 3 3.844 3c1.852 0 3.398-1.281 3.844-3h8.312c.446 1.719 1.992 3 3.844 3c1.852 0 3.398-1.281 3.844-3H32v-8.156l-.063-.157l-2-6L29.72 10H21V6zm1 4v2h9v-2zm20 2h7.281L30 17.125V23h-1.156c-.446-1.719-1.992-3-3.844-3c-1.852 0-3.398 1.281-3.844 3H21zM2 14v2h6v-2zm7 8c1.117 0 2 .883 2 2s-.883 2-2 2s-2-.883-2-2s.883-2 2-2zm16 0c1.117 0 2 .883 2 2s-.883 2-2 2s-2-.883-2-2s.883-2 2-2z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="shopping-cart" viewBox="0 0 32 32">
+        <path fill="currentColor" d="M5 7c-.55 0-1 .45-1 1s.45 1 1 1h2.219l2.625 10.5c.222.89 1.02 1.5 1.937 1.5H23.25c.902 0 1.668-.598 1.906-1.469L27.75 10H11l.5 2h13.656l-1.906 7H11.781L9.156 8.5A1.983 1.983 0 0 0 7.22 7zm17 14c-1.645 0-3 1.355-3 3s1.355 3 3 3s3-1.355 3-3s-1.355-3-3-3zm-9 0c-1.645 0-3 1.355-3 3s1.355 3 3 3s3-1.355 3-3s-1.355-3-3-3zm0 2c.563 0 1 .438 1 1c0 .563-.438 1-1 1c-.563 0-1-.438-1-1c0-.563.438-1 1-1zm9 0c.563 0 1 .438 1 1c0 .563-.438 1-1 1c-.563 0-1-.438-1-1c0-.563.438-1 1-1z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="gift" viewBox="0 0 32 32">
+        <path fill="currentColor" d="M12 5c-1.645 0-3 1.355-3 3c0 .352.074.684.188 1H4v6h1v13h22V15h1V9h-5.188A2.95 2.95 0 0 0 23 8c0-1.645-1.355-3-3-3c-1.75 0-2.938 1.328-3.719 2.438c-.105.148-.187.292-.281.437c-.094-.145-.176-.29-.281-.438C14.938 6.329 13.75 5 12 5zm0 2c.625 0 1.438.672 2.063 1.563c.152.218.128.23.25.437H12c-.566 0-1-.434-1-1c0-.566.434-1 1-1zm8 0c.566 0 1 .434 1 1c0 .566-.434 1-1 1h-2.313c.122-.207.098-.219.25-.438C18.563 7.673 19.375 7 20 7zM6 11h20v2h-9v-1h-2v1H6zm1 4h18v11h-8V16h-2v10H7z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="return" viewBox="0 0 32 32">
+        <path fill="currentColor" d="M16 3C8.832 3 3 8.832 3 16s5.832 13 13 13s13-5.832 13-13h-2c0 6.086-4.914 11-11 11S5 22.086 5 16S9.914 5 16 5c3.875 0 7.262 1.984 9.219 5H20v2h8V4h-2v3.719C23.617 4.844 20.02 3 16 3z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="quote" viewBox="0 0 24 24">
+        <path fill="currentColor" d="m15 17l2-4h-4V6h7v7l-2 4h-3Zm-9 0l2-4H4V6h7v7l-2 4H6Z" />
+      </symbol>      
+      <symbol xmlns="http://www.w3.org/2000/svg" id="nav-icon" viewBox="0 0 16 16">
+        <path d="M14 10.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="close" viewBox="0 0 16 16">
+        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="navbar-icon" viewBox="0 0 16 16">
+        <path d="M14 10.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5z" />
+      </symbol>
+    </svg>
+
+    <div id="preloader">
+      <span class="loader">
+        <span class="loader-inner"></span>
+      </span>
+    </div>
+
+    <div class="search-box position-relative overflow-hidden w-100">
+      <div class="search-wrap">
+        <div class="close-button position-absolute">
+          <svg class="close" width="22" height="22">
+            <use xlink:href="#close"></use>
+          </svg>
+        </div>
+        <form id="search-form" class="text-center pt-3" action="" method="">
+          <input type="text" class="search-input fs-5 p-4 bg-transparent" placeholder="Search...">
+          <svg class="search" width="22" height="22">
+            <use xlink:href="#search"></use>
+          </svg>
+        </form>
+      </div>
+    </div> 
+
+    <header id="header" class="site-header text-black">
+      <nav id="header-nav" class="navbar navbar-expand-lg px-3 mb-3">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" class="logo">
+          </a>
+          <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <svg class="navbar-icon" width="50" height="50">
+              <use xlink:href="#navbar-icon"></use>
+            </svg>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
+            <div class="offcanvas-header px-4 pb-0">
+              <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" class="logo">
+              </a>
+              <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul id="navbar" class="navbar-nav text-uppercase justify-content-end align-items-center flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link me-4" href="#about-us">Homepage</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link me-4" href="#about-us">About Us</a>
+                </li>
+                <li class="nav-item dropdown me-4">
+                  <a class="nav-link dropdown-toggle" href="#" id="dropdownPages" data-bs-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">Shop</a>
+                  <ul class="dropdown-menu list-unstyled" aria-labelledby="dropdownPages">
+                    <li>
+                      <a href="#" class="dropdown-item item-anchor">Shop Sidebar </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item item-anchor">Shop Grid </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown me-4">
+                  <a class="nav-link dropdown-toggle" href="#" id="dropdownPages" data-bs-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">Blog</a>
+                  <ul class="dropdown-menu list-unstyled" aria-labelledby="dropdownPages">
+                    <li>
+                      <a href="#" class="dropdown-item item-anchor">Blog Classic </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item item-anchor">Blog 4 Column </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item item-anchor">Blog With Sidebar </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown me-4">
+                  <a class="nav-link dropdown-toggle" href="#" id="dropdownPages" data-bs-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">Pages</a>
+                  <ul class="dropdown-menu list-unstyled" aria-labelledby="dropdownPages">
+                    <li>
+                      <a href="#" class="dropdown-item item-anchor">About </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item item-anchor">Cart </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item item-anchor">Checkout </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item item-anchor">Contact </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item item-anchor">Error Page </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item item-anchor">FAQs </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item item-anchor">My Account </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item item-anchor">Order Tracking </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item item-anchor">Wishlist </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item item-anchor">Single Post </a>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item item-anchor">Single Product </a>
+                    </li>
+                  </ul>
+                </li>
+                
+                <li class="nav-item">
+                  <div class="user-items ps-5">
+                    <ul class="d-flex justify-content-end list-unstyled">
+                      <li class="search-item pe-3" data-bs-toggle="collapse" data-bs-target="#search-box" aria-controls="search-box" aria-expanded="false" aria-label="Toggle navigation">
+                        <svg class="search" width="18" height="18">
+                          <use xlink:href="#search"></use>
+                        </svg>
+                      </li>
+                      <li class="pe-3">
+                        <a href="#">
+                          <svg class="user" width="18" height="18">
+                            <use xlink:href="#user"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <svg class="cart" width="18" height="18">
+                            <use xlink:href="#cart"></use>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>    
+    </header>
+
+    <section id="billboard" class="overflow-hidden">
+      <div class="swiper main-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="banner-item" style="background-image: url(images/banner-image1.jpg); background-repeat: no-repeat; background-position: right; height: 682px;">
+                    <div class="banner-content padding-large">
+                      <h1 class="display-1 text-uppercase text-dark pb-2">Handcrafted Wooden Dining Sets</h1>
+                      <p>Bring warmth and tradition into your home with dining sets made by skilled rural artisans. Crafted from sustainable wood, designed to last for generations.</p>                      
+                      <a href="#" class="btn btn-medium btn-arrow position-relative mt-5">
+                        <span class="text-uppercase">Shop Now</span>            
+                        <svg class="arrow-right position-absolute" width="18" height="20">
+                          <use xlink:href="#arrow-right"></use>
+                        </svg>
+                      </a>   
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="banner-item" style="background-image: url(images/product-item1.jpg); background-repeat: no-repeat; background-position: right; height: 682px;">
+                    <div class="banner-content padding-large">
+                      <h1 class="display-1 text-uppercase text-dark pb-2">Comfortable Handwoven Sofas</h1>
+                      <p>Relax in comfort with eco-friendly, handwoven sofa sets. Every piece is a story of craftsmanship and culture.
+                      </p>                                         
+                      <a href="#" class="btn btn-medium btn-arrow position-relative mt-5">
+                        <span class="text-uppercase">Shop Now</span>            
+                        <svg class="arrow-right position-absolute" width="18" height="20">
+                          <use xlink:href="#arrow-right"></use>
+                        </svg>
+                      </a>   
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination position-absolute"></div>
+    </section>
+
+    <section id="company-services" class="padding-large">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 pb-3">
+            <div class="icon-box d-flex align-items-center">
+              <div class="icon-box-icon pt-3 pe-3 pb-3 ps-3">
+                <svg class="shipping-fast">
+                  <use xlink:href="#shipping-fast" />
+                </svg>
+              </div>
+              <div class="icon-box-content ps-3">
+                <h3 class="card-title text-uppercase text-dark">Quick delivery</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 pb-3">
+            <div class="icon-box d-flex align-items-center">
+              <div class="icon-box-icon pt-3 pe-3 pb-3 ps-3">
+                <svg class="shopping-cart">
+                  <use xlink:href="#shopping-cart" />
+                </svg>
+              </div>
+              <div class="icon-box-content ps-3">
+                <h3 class="card-title text-uppercase text-dark">Pick up in store</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 pb-3">
+            <div class="icon-box d-flex align-items-center">
+              <div class="icon-box-icon pt-3 pe-3 pb-3 ps-3">
+                <svg class="gift">
+                  <use xlink:href="#gift" />
+                </svg>
+              </div>
+              <div class="icon-box-content ps-3">
+                <h3 class="card-title text-uppercase text-dark">Special Packaging</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 pb-3">
+            <div class="icon-box d-flex align-items-center">
+              <div class="icon-box-icon pt-3 pe-3 pb-3 ps-3">
+                <svg class="return">
+                  <use xlink:href="#return" />
+                </svg>
+              </div>
+              <div class="icon-box-content ps-3">
+                <h3 class="card-title text-uppercase text-dark">Easy Returns</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-us">
+      <div class="container-fluid">
+        <div class="row align-items-center justify-content-between g-5">
+          <div class="col-lg-6">
+            <div class="image-holder mb-4 jarallax">
+                <img src="images/i2.jpg" alt="single" class="img-fluid jarallax-img">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="detail p-5">
+              <div class="display-header">
+                <h2 class="display-2 text-uppercase text-dark pb-2">About Us</h2>
+                <p class="pb-3">Desi Etsy is India’s own niche e-commerce platform for handmade products. We connect rural and urban artisans to buyers across the country, making authentic handmade goods accessible to everyone. From Varanasi’s handloom sarees to Jaipur’s pottery, every product here represents a legacy of skill, culture, and sustainability.</p>
+                <p>By shopping with us, you don’t just buy a product — you support livelihoods, preserve heritage, and empower communities.</p>
+                <a href="#" class="btn btn-medium btn-arrow outline-dark position-relative mt-3">
+                  <span class="text-uppercase">About us</span>            
+                  <svg class="arrow-right position-absolute" width="18" height="20">
+                    <use xlink:href="#arrow-right"></use>
+                  </svg>
+                </a>  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured-products" class="product-store position-relative padding-large">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="display-header pb-3 d-flex justify-content-between flex-wrap col-md-12">
+            <h2 class="display-2 text-dark text-uppercase">Our Featured Products</h2> 
+            <a href="#" class="btn btn-medium btn-arrow btn-normal position-relative">
+              <span class="text-uppercase">Shop All</span>            
+              <svg class="arrow-right position-absolute" width="18" height="20">
+                <use xlink:href="#arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div id="featured-swiper" class="product-swiper col-md-12">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="product-card image-zoom-effect link-effect d-flex flex-wrap">
+                    <div class="image-holder">
+                      <img src="images/i2.jpg" alt="product-item" class="product-image img-fluid">
+                    </div>
+                    <div class="cart-concern">
+                      <h3 class="card-title text-uppercase pt-3 text-primary">
+                        <a href="#" class="text-primary">Stationery & Crafts</a>
+                      </h3>
+                      <div class="cart-info">
+                        <a class="pseudo-text-effect" href="#" data-after="ADD TO CART"><span>$200</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card image-zoom-effect link-effect d-flex flex-wrap">
+                    <div class="image-holder">
+                      <img src="images/i6.webp" alt="product-item" class="product-image img-fluid">
+                    </div>
+                    <div class="cart-concern">
+                      <h3 class="card-title text-uppercase pt-3 text-primary">
+                        <a href="#" class="text-primary">Circle Dining Table</a>
+                      </h3>
+                      <div class="cart-info">
+                        <a class="pseudo-text-effect" href="#" data-after="ADD TO CART">
+                          <span>$200</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card image-zoom-effect link-effect d-flex flex-wrap">
+                    <div class="image-holder">
+                      <img src="images/i11.jpg" alt="product-item" class="product-image img-fluid">
+                    </div>
+                    <div class="cart-concern">
+                      <h3 class="card-title text-uppercase pt-3 text-primary">
+                        <a href="#" class="text-primary">Textiles & Apparel</a>
+                      </h3>
+                      <div class="cart-info">
+                        <a class="pseudo-text-effect" href="#" data-after="ADD TO CART">
+                          <span>$200</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card image-zoom-effect link-effect d-flex flex-wrap">
+                    <div class="image-holder">
+                      <img src="images/i8.jpg" alt="product-item" class="product-image img-fluid">
+                    </div>
+                    <div class="cart-concern">
+                      <h3 class="card-title text-uppercase pt-3 text-primary">
+                        <a href="#" class="text-primary">Pattern Tea Table</a>
+                      </h3>
+                      <div class="cart-info">
+                        <a class="pseudo-text-effect" href="#" data-after="ADD TO CART">
+                          <span>$200</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card image-zoom-effect link-effect d-flex flex-wrap">
+                    <div class="image-holder">
+                      <img src="images/i5.jpg" alt="product-item" class="product-image img-fluid">
+                    </div>
+                    <div class="cart-concern">
+                      <h3 class="card-title text-uppercase pt-3 text-primary">
+                        <a href="#" class="text-primary">Pottery & Décor</a>
+                      </h3>
+                      <div class="cart-info">
+                        <a class="pseudo-text-effect" href="#" data-after="ADD TO CART">
+                          <span>$200</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card image-zoom-effect link-effect d-flex flex-wrap">
+                    <div class="image-holder">
+                      <img src="images/i10.jpg" alt="product-item" class="product-image img-fluid">
+                    </div>
+                    <div class="cart-concern">
+                      <h3 class="card-title text-uppercase pt-3 text-primary">
+                        <a href="#" class="text-primary">Home Décor</a>
+                      </h3>
+                      <div class="cart-info">
+                        <a class="pseudo-text-effect" href="#" data-after="ADD TO CART">
+                          <span>$200</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination text-center mt-5"></div>
+          </div>
+        </div>
+      </div>      
+    </section>
+
+    <section id="hero" class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="hero">
+              <h1 class="display-5 fw-bold">Shop handmade. Support local artisans.</h1>
+              <p class="lead text-muted">Discover authentic, handcrafted treasures from artisans across India — textiles, pottery, jewelry, and home décor created with time-honored traditions. Every purchase empowers local creators and preserves cultural heritage.</p>
+
+              <div class="d-flex gap-2 flex-wrap">
+                <a class="btn btn-lg" href="#marketplace" style="background:var(--primary);color:#000000;">Explore Crafts</a>
+                <a class="btn btn-outline-primary btn-lg" href="#become-artisan">Become an Artisan</a>
+              </div>
+
+              <div class="mt-4 small text-muted">
+                <span class="me-3"><strong>Verified artisans</strong> • KYC & product checks</span>
+                <span><strong>Secure payments</strong> • Razorpay integration</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 text-center">
+            <img src="images/i1.jpg" alt="artisan weaving" class="img-fluid rounded" style="max-height:360px; object-fit:cover;">
+          </div>
+        </div>
+      </div>
+    </section><hr>
+
+    <!-- BECOME ARTISAN (registration) -->
+    <section id="become-artisan" class="py-5">
+      <div class="container">
+        <div class="row g-3 align-items-center">
+          <div class="col-lg-7">
+            <h3>Artisan Registration</h3>
+            <p class="text-muted small mb-4">Register your store, upload KYC documentation and start listing handmade products. Our team reviews artisan applications within 24–48 hours.</p>
+
+            <form id="artisan-form" class="art-form needs-validation" novalidate>
+              <div class="row g-2">
+                <div class="col-md-6">
+                  <label class="form-label small">Full name</label>
+                  <input class="form-control" id="art-name" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small">Email</label>
+                  <input class="form-control" id="art-email" type="email" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small">Phone</label>
+                  <input class="form-control" id="art-phone" type="tel" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small">City / State</label>
+                  <input class="form-control" id="art-location">
+                </div>
+                <div class="col-12">
+                  <label class="form-label small">Shop name</label>
+                  <input class="form-control" id="art-shop" placeholder="e.g. Ritu Handlooms">
+                </div>
+                <div class="col-12">
+                  <label class="form-label small">Short bio</label>
+                  <textarea id="art-bio" class="form-control" rows="3" placeholder="A short description about your craft"></textarea>
+                </div>
+                <div class="col-12">
+                  <label class="form-label small">KYC Documents (photo ID, sample product images)</label>
+                  <input class="form-control" id="art-kyc" type="file" multiple>
+                  <div class="form-text small">We accept jpg/png/pdf. Files will be reviewed by admin.</div>
+                </div>
+              </div>
+
+              <div class="mt-3">
+                <button type="submit" class="btn btn-primary">Submit for review</button>
+                <button type="reset" class="btn btn-outline-secondary">Reset</button>
+              </div>
+            </form>
+
+            <div id="artisan-msg" class="mt-3" style="display:none;"></div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="admin-card">
+              <h6>Artisan Dashboard (Preview)</h6>
+              <p class="small text-muted">Once approved, artisans can create products, manage inventory, and track orders from their dashboard.</p>
+              <ul class="list-unstyled small">
+                <li>• Add / edit / delete products</li>
+                <li>• Track orders & status (Packed → Shipped → Delivered)</li>
+                <li>• View payouts & reports</li>
+              </ul>
+              <a class="btn btn-outline-primary" href="#admin">View admin panel</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><hr>
+
+    <section id="testimonials" class="position-relative">
+      <div class="container">
+        <div class="row">
+          <div class="review-content position-relative">
+            <div class="swiper-icon swiper-arrow swiper-arrow-prev position-absolute d-flex align-items-center justify-content-center">
+              <svg class="icon-arrow" width="25" height="25">
+                <use xlink:href="#arrow-left" />
+              </svg>
+            </div>
+            <div class="swiper testimonial-swiper">
+              <div class="quotation text-center">
+                <svg class="quote">
+                  <use xlink:href="#quote" />
+                </svg>
+              </div>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide text-center d-flex justify-content-center">
+                  <div class="review-item col-md-10">
+                    <i class="icon icon-review"></i>
+                    <blockquote class="fs-4">“I ordered a handloom saree from Desi Etsy and it exceeded my expectations. The fabric is soft, beautifully woven, and came in eco-friendly packaging. Feels amazing to support artisans directly.”</blockquote>
+                    <div class="author-detail">
+                      <div class="name text-primary text-uppercase pt-2">Ananya Sharma, Mumbai</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide text-center d-flex justify-content-center">
+                  <div class="review-item col-md-10">
+                    <i class="icon icon-review"></i>
+                    <blockquote class="fs-4">“The terracotta planters I bought added so much charm to my balcony. The craftsmanship is authentic, delivery was quick, and I love that my purchase helps local artisans.”</blockquote>
+                    <div class="author-detail">
+                      <div class="name text-primary text-uppercase pt-2">Ravi Patel, Bengaluru</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-icon swiper-arrow swiper-arrow-next position-absolute d-flex align-items-center justify-content-center">
+              <svg class="icon-arrow" width="25" height="25">
+                <use xlink:href="#arrow-right" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>      
+      <div class="swiper-pagination text-center position-absolute"></div>
+    </section>
+
+    <section id="collections" class="position-relative padding-large">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="swiper collection-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide overflow-hidden">
+                <div class="product-card">
+                  <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
+                    <h3 class="card-title text-uppercase">
+                      <a href="#">Home Decor</a>
+                    </h3>
+                  </div>
+                  <div class="image-overlay position-relative">
+                    <div class="product-image">
+                      <img src="images/i5.jpg" alt="product-item" class="product-image img-fluid">
+                      <div class="text-box box-slide position-absolute">
+                        <div class="text-content p-5 bg-light">
+                          <h3>About Home Decor</h3>
+                          <p>Beautiful handmade crafts that bring elegance and charm to your home.</p>
+                          <ul>
+                            <li>Unique Pottery & Art Pieces</li>
+                            <li>Decorative Wall & Table Items</li>
+                            <li>Elegant and Cozy Vibe</li>
+                          </ul>
+                          <a href="#" class="btn btn-normal mt-3">Learn More</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>                  
+                </div>
+              </div>
+              <div class="swiper-slide overflow-hidden">
+                <div class="product-card">
+                  <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
+                    <h3 class="card-title text-uppercase">
+                      <a href="#">Crafted Spaces</a>
+                    </h3>
+                  </div>
+                  <div class="image-overlay position-relative">
+                    <div class="product-image">
+                      <img src="images/i6.webp" alt="product-item" class="product-image img-fluid">
+
+                      <div class="text-box box-slide position-absolute">
+                        <div class="text-content p-5 bg-light">
+                          <h3>About Crafted Spaces</h3>
+                          <p>Transform your rooms with artisanal designs and traditional beauty.</p>
+                          <ul>
+                            <li>Stylish Living Essentials</li>
+                            <li>Handcrafted Touch for Every Corner</li>
+                            <li>Blends Tradition with Modern Style</li>
+                          </ul>
+                          <a href="#" class="btn btn-normal mt-3">Learn More</a>
+                        </div>
+                      </div>
+                    </div>
+                  <!-- product-image -->
+                  </div>                  
+                </div>
+              </div>
+              <div class="swiper-slide overflow-hidden">
+                <div class="product-card">
+                  <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
+                    <h3 class="card-title text-uppercase">
+                      <a href="#">Kitchens</a>
+                    </h3>
+                  </div>
+                  <div class="image-overlay position-relative">
+                    <div class="product-image">
+                      <img src="images/i8.jpg" alt="product-item" class="product-image img-fluid">
+
+                      <div class="text-box box-slide position-absolute">
+                        <div class="text-content p-5 bg-light">
+                          <h3>About Kitchen</h3>
+                          <p>Add an artistic essence to your home with colorful handmade decor.</p>
+                          <ul>
+                            <li>Various Types of Bedroom</li>
+                            <li>Different Size of Bed</li>
+                            <li>Comfortable and Clean Room</li>
+                          </ul>
+                          <a href="#" class="btn btn-normal mt-3">Learn More</a>
+                        </div>
+                      </div>
+                    </div>
+                  <!-- product-image -->
+                  </div>                  
+                </div>
+              </div>
+              <div class="swiper-slide overflow-hidden">
+                <div class="product-card">
+                  <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
+                    <h3 class="card-title text-uppercase">
+                      <a href="#">Guest Rooms</a>
+                    </h3>
+                  </div>
+                  <div class="image-overlay position-relative">
+                    <div class="product-image">
+                      <img src="images/i9.jpg" alt="product-item" class="product-image img-fluid">
+
+                      <div class="text-box box-slide position-absolute">
+                        <div class="text-content p-5 bg-light">
+                          <h3>About Guest Rooms</h3>
+                          <p>Celebrate tradition with ethnic crafts designed for modern homes.</p>
+                          <ul>
+                            <li>Traditional Patterns & Textures</li>
+                            <li>Handmade Cultural Pieces</li>
+                            <li>Colorful and Authentic Decor</li>
+                          </ul>
+                          <a href="#" class="btn btn-normal mt-3">Learn More</a>
+                        </div>
+                      </div>
+                    </div>
+                  <!-- product-image -->
+                  </div>                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination position-absolute text-center"></div>
+    </section>
+
+    <section class="subscribe">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8">
+            <div class="subscribe-content padding-large">
+              <div class="subscribe-header">
+                <h2 class="display-4">Get offers & discounts by subscribing us</h2>
+              </div>
+              <form id="form">
+                <input type="text" name="email" placeholder="Enter Your Email Addresss" class="w-100 bg-light border-0 ps-5 fst-italic">
+                <button class="btn btn-full btn-black text-uppercase">Subscribe Now</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="trending-products" class="product-store padding-large">
+      <div class="container-fluid">
+        <div class="row overflow-hidden">
+          <div class="display-header pb-3 d-flex justify-content-between col-md-12">
+            <h2 class="display-2 text-dark text-uppercase">Trending products</h2>
+            <a href="#" class="btn btn-medium btn-arrow btn-normal position-relative">
+              <span class="text-uppercase">Shop all</span> 
+              <svg class="arrow-right position-absolute" width="18" height="20">
+                <use xlink:href="#arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+          <div id="trending-swiper" class="product-swiper col-md-12">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="product-card image-zoom-effect link-effect d-flex flex-wrap">
+                    <div class="image-holder">
+                      <img src="images/i10.jpg" alt="product-item" class="product-image img-fluid">
+                    </div>
+                    <div class="cart-concern">
+                      <h3 class="card-title text-uppercase pt-3 text-primary">
+                        <a href="#">Black Sofa Set</a>
+                      </h3>
+                      <div class="cart-info">
+                        <a class="pseudo-text-effect" href="#" data-after="ADD TO CART"><span>$200</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card image-zoom-effect link-effect d-flex flex-wrap">
+                    <div class="image-holder">
+                      <img src="images/i11.jpg" alt="product-item" class="product-image img-fluid">
+                    </div>
+                    <div class="cart-concern">
+                      <h3 class="card-title text-uppercase pt-3 text-primary">
+                        <a href="#">Circle Dining Table</a>
+                      </h3>
+                      <div class="cart-info">
+                        <a class="pseudo-text-effect" href="#" data-after="ADD TO CART">
+                          <span>$200</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card image-zoom-effect link-effect d-flex flex-wrap">
+                    <div class="image-holder">
+                      <img src="images/i12.jpg" alt="product-item" class="product-image img-fluid">
+                    </div>
+                    <div class="cart-concern">
+                      <h3 class="card-title text-uppercase pt-3 text-primary">
+                        <a href="#">Minimal Sofa</a>
+                      </h3>
+                      <div class="cart-info">
+                        <a class="pseudo-text-effect" href="#" data-after="ADD TO CART">
+                          <span>$200</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card image-zoom-effect link-effect d-flex flex-wrap">
+                    <div class="image-holder">
+                      <img src="images/i3.jpg" alt="product-item" class="product-image img-fluid">
+                    </div>
+                    <div class="cart-concern">
+                      <h3 class="card-title text-uppercase pt-3 text-primary">
+                        <a href="#">Pattern Tea Table</a>
+                      </h3>
+                      <div class="cart-info">
+                        <a class="pseudo-text-effect" href="#" data-after="ADD TO CART">
+                          <span>$200</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card image-zoom-effect link-effect d-flex flex-wrap">
+                    <div class="image-holder">
+                      <img src="images/i14.webp" alt="product-item" class="product-image img-fluid">
+                    </div>
+                    <div class="cart-concern">
+                      <h3 class="card-title text-uppercase pt-3 text-primary">
+                        <a href="#">Black Sofa Set</a>
+                      </h3>
+                      <div class="cart-info">
+                        <a class="pseudo-text-effect" href="#" data-after="ADD TO CART">
+                          <span>$200</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-card image-zoom-effect link-effect d-flex flex-wrap">
+                    <div class="image-holder">
+                      <img src="images/i5.jpg" alt="product-item" class="product-image img-fluid">
+                    </div>
+                    <div class="cart-concern">
+                      <h3 class="card-title text-uppercase pt-3 text-primary">
+                        <a href="#">Minimal Sofa</a>
+                      </h3>
+                      <div class="cart-info">
+                        <a class="pseudo-text-effect" href="#" data-after="ADD TO CART">
+                          <span>$200</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination text-center mt-5"></div>
+            </div>
+          </div>
+        </div>
+      </div>      
+    </section>
+
+    <section id="latest-blog">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="display-header d-flex flex-wrap justify-content-between pb-3">
+              <h2 class="display-2 text-dark text-uppercase">Read Our Articles</h2>
+              <a href="#" class="btn btn-medium btn-arrow btn-normal position-relative">
+                <span class="text-uppercase">See all articles</span>            
+                <svg class="arrow-right position-absolute" width="18" height="20">
+                  <use xlink:href="#arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row g-3 post-grid">
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+            <div class="card-item">
+              <div class="card border-0 bg-transparent">
+                <div class="card-image">
+                  <img src="images/i2.jpg" alt="" class="post-image img-fluid">
+                </div>
+              </div>
+              <div class="card-body p-0 mt-4">
+                <h3 class="card-title text-uppercase">
+                  <a href="#">Best looking interior things for bedrooms</a>
+                </h3>
+                <p>Enim ut nunc, ultrices mauris felis viverra amet. Ante sed dictum nisi suscipit ac ut faucibus pretium interdum.</p>
+                <a href="#" class="btn btn-normal text-uppercase p-0"><em>Read More</em></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+            <div class="card-item">
+              <div class="card border-0">
+                <div class="card-image">
+                  <img src="images/i3.jpg" alt="" class="post-image img-fluid">
+                </div>
+              </div>
+              <div class="card-body p-0 mt-4">
+                <h3 class="card-title text-uppercase">
+                  <a href="#">Trending modern furniture design in 2022</a>
+                </h3>
+                <p>Enim ut nunc, ultrices mauris felis viverra amet. Ante sed dictum nisi suscipit ac ut faucibus pretium interdum.</p>
+                <a href="#" class="btn btn-normal text-uppercase p-0"><em>Read More</em></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+            <div class="card-item">
+              <div class="card border-0">
+                <div class="card-image">
+                  <img src="images/i4.jpeg" alt="" class="post-image img-fluid">
+                </div>
+              </div>
+              <div class="card-body p-0 mt-4">
+                <h3 class="card-title text-uppercase">
+                  <a href="#">Why is simple firniture design looks fabulous</a>
+                </h3>
+                <p>Enim ut nunc, ultrices mauris felis viverra amet. Ante sed dictum nisi suscipit ac ut faucibus pretium interdum.</p>
+                <a href="#" class="btn btn-normal text-uppercase p-0"><em>Read More</em></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer" class="overflow-hidden padding-large">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="row d-flex flex-wrap justify-content-between">
+            <div class="col-lg-3 col-sm-6 pb-3 pe-4">
+              <div class="footer-menu">
+                <img src="images/logo.png" alt="logo" class="pb-3">
+                <p>Desi Etsy is India’s handmade hub, empowering artisans and delighting customers with authentic products.</p>
+              </div>
+              <div class="copyright">
+                <p>© Copyright 2023. Design by Infotact Solution (G-3)</a>
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-2 col-sm-6 pb-3">
+              <div class="footer-menu text-uppercase">
+                <h5 class="widget-title pb-2">Quick Links</h5>
+                <ul class="menu-list list-unstyled text-uppercase">
+                  <li class="menu-item pb-2">
+                    <a href="#">Home</a>
+                  </li>
+                  <li class="menu-item pb-2">
+                    <a href="#">About</a>
+                  </li>
+                  <li class="menu-item pb-2">
+                    <a href="#">Services</a>
+                  </li>
+                  <li class="menu-item pb-2">
+                    <a href="#">Blogs</a>
+                  </li>
+                  <li class="menu-item pb-2">
+                    <a href="#">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-sm-6 pb-3">
+              <div class="footer-menu text-uppercase">
+                <h5 class="widget-title pb-2">Social</h5>
+                <div class="social-links">
+                  <ul class="list-unstyled">
+                    <li class="pb-2">
+                      <a href="#">Facebook</a>
+                    </li>
+                    <li class="pb-2">
+                      <a href="#">Twitter</a>
+                    </li>
+                    <li class="pb-2">
+                      <a href="#">Pinterest</a>
+                    </li>
+                    <li class="pb-2">
+                      <a href="#">Instagram</a>
+                    </li>
+                    <li>
+                      <a href="#">Youtube</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div class="footer-menu contact-item">
+                <h5 class="widget-title text-uppercase pb-2">Contact Us</h5>
+                <p><a href="">+ 91-9123456789</a></p>
+                <p><a href="mailto:">desietsy@gmail.com</a></p>
+                <p>Bangluru, India</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/plugins.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <!-- Bootstrap JS + small client JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Demo product data (replace with API fetch in production)
+      const PRODUCTS = [
+        { id: 'p1', title:'Handloom Cotton Saree', price:2499, category:'textiles', material:'cotton', artisan:'Ritu Handlooms', location:'Udaipur', stock:8, img:'images/product-item1.jpg', desc:'Handwoven cotton saree with natural dyes.'},
+        { id: 'p2', title:'Terracotta Planter Set', price:1199, category:'pottery', material:'terracotta', artisan:"Potter's Yard", location:'Jaipur', stock:12, img:'images/product-item2.jpg', desc:'Set of 3 terracotta planters, wheel-thrown.'},
+        { id: 'p3', title:'Brass Handcrafted Earrings', price:899, category:'jewelry', material:'brass', artisan:'Makers Studio', location:'Ahmedabad', stock:5, img:'images/product-item3.jpg', desc:'Hand-forged brass earrings, polished finish.'},
+        { id: 'p4', title:'Block Print Cushion Covers', price:749, category:'textiles', material:'cotton', artisan:'BlockArt', location:'Jaipur', stock:10, img:'images/product-item4.jpg', desc:'Hand-block printed cushion covers.'},
+        { id: 'p5', title:'Handwoven Table Runner', price:1299, category:'textiles', material:'cotton', artisan:'WeaveWorks', location:'Varanasi', stock:6, img:'images/product-item5.jpg', desc:'Handloom table runner, traditional pattern.'},
+        { id: 'p6', title:'Recycled Paper Notebook', price:249, category:'stationery', material:'paper', artisan:'PaperRoots', location:'Bengaluru', stock:25, img:'images/product-item6.jpg', desc:'Eco-friendly recycled paper notebook.'}
+      ];
+
+      // Cart (simple client-side)
+      let CART = {};
+
+      function currencyINR(x){ return '₹' + Number(x).toLocaleString('en-IN'); }
+
+      function renderProducts(containerId, list){
+        const container = document.getElementById(containerId);
+        container.innerHTML = '';
+        list.forEach(p=>{
+          const col = document.createElement('div');
+          col.className = 'col-sm-6 col-md-4';
+          col.innerHTML = `
+            <div class="product-card">
+              <img src="${p.img}" alt="${p.title}" />
+              <div class="p-3">
+                <div class="d-flex justify-content-between align-items-start">
+                  <div>
+                    <h6 class="mb-1">${p.title}</h6>
+                    <div class="small text-muted">${p.artisan} • ${p.location}</div>
+                  </div>
+                  <div class="text-end">
+                    <div class="badge-micro">${currencyINR(p.price)}</div>
+                  </div>
+                </div>
+                <p class="small text-muted mt-2 mb-3">${p.desc}</p>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-sm btn-outline-primary btn-view" data-id="${p.id}">Quick view</button>
+                  <button class="btn btn-sm btn-primary btn-add" data-id="${p.id}">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          `;
+          container.appendChild(col);
+        });
+
+        // wire buttons
+        document.querySelectorAll('.btn-add').forEach(b=>{
+          b.addEventListener('click', e=>{
+            const id = e.currentTarget.dataset.id;
+            addToCart(id,1);
+          });
+        });
+        document.querySelectorAll('.btn-view').forEach(b=>{
+          b.addEventListener('click', e=>{
+            const id = e.currentTarget.dataset.id;
+            openProductModal(id);
+          });
+        });
+      }
+
+      // Filters & marketplace
+      function applyFilters(){
+        const category = document.getElementById('filter-category').value;
+        const material = document.getElementById('filter-material').value;
+        const minP = Number(document.getElementById('min-price').value || 0);
+        const maxP = Number(document.getElementById('max-price').value || 9999999);
+        const instock = document.getElementById('filter-instock').checked;
+
+        const filtered = PRODUCTS.filter(p=>{
+          if(category !== 'all' && p.category !== category) return false;
+          if(material !== 'all' && p.material !== material) return false;
+          if(p.price < minP || p.price > maxP) return false;
+          if(instock && (!p.stock || p.stock <=0)) return false;
+          return true;
+        });
+
+        document.getElementById('shown-count').textContent = filtered.length;
+        renderProducts('products-grid', filtered);
+        renderProducts('market-grid', filtered);
+      }
+
+      function clearFilters(){
+        document.getElementById('filter-category').value='all';
+        document.getElementById('filter-material').value='all';
+        document.getElementById('min-price').value='';
+        document.getElementById('max-price').value='';
+        document.getElementById('filter-instock').checked=true;
+        applyFilters();
+      }
+
+      // Product modal
+      function openProductModal(id){
+        const p = PRODUCTS.find(x=>x.id===id);
+        if(!p) return;
+        document.getElementById('modal-img').src = p.img;
+        document.getElementById('modal-title').textContent = p.title;
+        document.getElementById('modal-artisan-name').textContent = p.artisan;
+        document.getElementById('modal-price').textContent = currencyINR(p.price);
+        document.getElementById('modal-desc').textContent = p.desc;
+        document.getElementById('modal-qty').value = 1;
+        document.getElementById('add-to-cart-modal').dataset.id = p.id;
+        // show modal
+        const modal = new bootstrap.Modal(document.getElementById('productModal'));
+        modal.show();
+      }
+
+      document.addEventListener('click', function(e){
+        if(e.target && e.target.id === 'add-to-cart-modal'){
+          const id = e.target.dataset.id;
+          const qty = Number(document.getElementById('modal-qty').value || 1);
+          addToCart(id, qty);
+          const modalEl = document.getElementById('productModal');
+          bootstrap.Modal.getInstance(modalEl).hide();
+        }
+      });
+
+      // CART functions
+      function addToCart(id, qty=1){
+        const p = PRODUCTS.find(x=>x.id===id);
+        if(!p) return alert('Product not found');
+        if(!CART[id]) CART[id] = {...p, qty:0};
+        CART[id].qty += qty;
+        if(CART[id].qty > p.stock) CART[id].qty = p.stock;
+        renderCart();
+      }
+
+      function updateCartItem(id, qty){
+        if(!CART[id]) return;
+        qty = Number(qty);
+        if(qty <=0) { delete CART[id]; } else { CART[id].qty = qty; }
+        renderCart();
+      }
+
+      function removeCartItem(id){
+        delete CART[id];
+        renderCart();
+      }
+
+      function renderCart(){
+        const container = document.getElementById('cart-items');
+        container.innerHTML = '';
+        const ids = Object.keys(CART);
+        document.getElementById('cart-count').textContent = ids.length;
+        if(ids.length === 0){
+          container.innerHTML = '<div class="list-group-item">Your cart is empty.</div>';
+          updateSummary();
+          return;
+        }
+        ids.forEach(id=>{
+          const item = CART[id];
+          const el = document.createElement('div');
+          el.className = 'list-group-item d-flex align-items-center';
+          el.innerHTML = `
+            <img src="${item.img}" style="width:80px;height:60px;object-fit:cover;border-radius:8px" class="me-3">
+            <div class="flex-grow-1">
+              <div><strong>${item.title}</strong></div>
+              <div class="small text-muted">${item.artisan} • ${item.location}</div>
+            </div>
+            <div class="text-end">
+              <div class="mb-1">${currencyINR(item.price)}</div>
+              <div class="d-flex gap-2 align-items-center justify-content-end">
+                <input type="number" min="1" value="${item.qty}" style="width:72px" class="form-control form-control-sm me-2 cart-qty" data-id="${id}">
+                <button class="btn btn-sm btn-outline-danger btn-remove" data-id="${id}">Remove</button>
+              </div>
+            </div>
+          `;
+          container.appendChild(el);
+        });
+
+        // attach events
+        container.querySelectorAll('.cart-qty').forEach(input=>{
+          input.addEventListener('change', (e)=>{
+            const id = e.target.dataset.id;
+            updateCartItem(id, e.target.value);
+          });
+        });
+        container.querySelectorAll('.btn-remove').forEach(b=>{
+          b.addEventListener('click', (e)=>{
+            removeCartItem(e.target.dataset.id);
+          });
+        });
+
+        updateSummary();
+      }
+
+      function updateSummary(){
+        const ids = Object.keys(CART);
+        let subtotal = 0;
+        ids.forEach(id => { subtotal += CART[id].price * CART[id].qty; });
+        const shipping = subtotal > 2000 ? 0 : 80;
+        const tax = Math.round(subtotal * 0.05);
+        const total = subtotal + shipping + tax;
+
+        document.getElementById('summary-sub').textContent = currencyINR(subtotal);
+        document.getElementById('summary-sh').textContent = currencyINR(shipping);
+        document.getElementById('summary-tax').textContent = currencyINR(tax);
+        document.getElementById('summary-total').textContent = currencyINR(total);
+      }
+
+      // Apply filters & clear
+      document.getElementById('apply-filters').addEventListener('click', applyFilters);
+      document.getElementById('clear-filters').addEventListener('click', clearFilters);
+
+      // Checkout button (placeholder)
+      document.getElementById('checkout-btn').addEventListener('click', function(){
+        if(Object.keys(CART).length === 0){ alert('Your cart is empty'); return; }
+        // toggle checkout form (in real app, redirect to authenticated checkout)
+        document.getElementById('checkout-form').style.display = 'block';
+        window.scrollTo({top: document.getElementById('checkout-form').offsetTop - 80, behavior:'smooth'});
+      });
+
+      // Artisan form submit (demo)
+      document.getElementById('artisan-form').addEventListener('submit', function(e){
+        e.preventDefault();
+        // demo behavior: show a success message
+        const msg = document.getElementById('artisan-msg');
+        msg.style.display = 'block';
+        msg.className = 'alert alert-info';
+        msg.textContent = 'Thanks — your artisan application has been submitted. We will review your KYC & product samples within 24–48 hours.';
+        this.reset();
+      });
+
+      // Initialize page
+      (function init(){
+        document.getElementById('year').textContent = new Date().getFullYear();
+        renderProducts('products-grid', PRODUCTS.slice(0,6));
+        renderProducts('market-grid', PRODUCTS.slice(0,6));
+        document.getElementById('shown-count').textContent = PRODUCTS.length;
+      })();
+
+      // small UX: sort control (client-side demo)
+      document.getElementById('sort-by').addEventListener('change', function(){
+        const val = this.value;
+        let sorted = [...PRODUCTS];
+        if(val === 'price-low') sorted.sort((a,b)=>a.price-b.price);
+        if(val === 'price-high') sorted.sort((a,b)=>b.price-a.price);
+        if(val === 'newest') sorted = sorted.reverse();
+        renderProducts('market-grid', sorted);
+      });
+
+      // NOTE: Razorpay integration steps (frontend placeholder)
+      // 1) On clicking Checkout, call server POST /orders to create an order and store in DB.
+      // 2) Server calls Razorpay Orders API, returns razorpayOrderId to client.
+      // 3) Client calls Razorpay checkout with key_id and order_id, collects payment.
+      // 4) On success, client sends payment ids to server for signature verification.
+      // 5) Server verifies signature with RAZORPAY_KEY_SECRET and marks order paid.
+      // Implement these endpoints on server and then replace this placeholder button with real flow.
+    </script>
+  </body>
+</html>
